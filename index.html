@@ -3,35 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="מטריצה - חברת פיתוח תוכנה מובילה המתמחה באפיון ופיתוח מערכות בכל השפות והטכנולוגיות">
-    <meta name="keywords" content="פיתוח תוכנה, אפיון מערכות, ייעוץ טכנולוגי, פיתוח אפליקציות">
-    <title>מטריצה - פתרונות פיתוח תוכנה מתקדמים</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="מטריצה - פתרונות תוכנה ארגוניים מתקדמים | טרנספורמציה דיגיטלית לעסקים מובילים">
+    <meta name="keywords" content="פתרונות תוכנה ארגוניים, טרנספורמציה דיגיטלית, תשתיות IT, ארכיטקטורת מערכות">
+    <title>מטריצה | פתרונות תוכנה ארגוניים ברמה העולמית</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animation Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="logo.png" alt="מטריצה" class="preloader-logo">
+            <div class="preloader-bar">
+                <div class="preloader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
-        <div class="container">
+        <div class="container-fluid">
             <div class="nav-wrapper">
                 <a href="#home" class="logo">
                     <img src="logo.png" alt="מטריצה">
                 </a>
                 <div class="nav-menu" id="navMenu">
                     <a href="#home" class="nav-link">בית</a>
-                    <a href="#about" class="nav-link">אודות</a>
-                    <a href="#services" class="nav-link">שירותים</a>
-                    <a href="#technologies" class="nav-link">טכנולוגיות</a>
-                    <a href="#clients" class="nav-link">לקוחות</a>
+                    <a href="#solutions" class="nav-link">פתרונות</a>
+                    <a href="#infrastructure" class="nav-link">תשתיות</a>
+                    <a href="#industries" class="nav-link">תעשיות</a>
+                    <a href="#success" class="nav-link">סיפורי הצלחה</a>
+                    <a href="#pricing" class="nav-link">תמחור</a>
                     <a href="#contact" class="nav-link">צור קשר</a>
+                    <a href="#demo" class="nav-cta">קבע הדגמה</a>
                 </div>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,276 +69,414 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <video autoplay muted loop class="hero-video">
-            <source src="video.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div id="particles-js"></div>
+            <div class="animated-gradient"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
         <div class="hero-content">
             <div class="container">
-                <h1 class="hero-title">פתרונות תוכנה חכמים לעולם דיגיטלי</h1>
-                <p class="hero-subtitle">מטריצה - המומחים שלך לאפיון ופיתוח מערכות בכל השפות והטכנולוגיות המובילות</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">התחל פרויקט</a>
-                    <a href="#services" class="btn btn-secondary">השירותים שלנו</a>
+                <div class="hero-text">
+                    <div class="hero-badge animate__animated animate__fadeInDown">
+                        <span class="badge-icon">⚡</span>
+                        <span>המובילים בטרנספורמציה דיגיטלית</span>
+                    </div>
+                    <h1 class="hero-title animate__animated animate__fadeInUp">
+                        <span class="title-line">פתרונות תוכנה</span>
+                        <span class="title-line gradient-text">שמניעים את העסק שלך</span>
+                        <span class="title-line">לעידן הבא</span>
+                    </h1>
+                    <p class="hero-subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                        ארכיטקטורת מערכות מתקדמת | תשתיות ענן | אוטומציה חכמה
+                    </p>
+                    <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                        <a href="#demo" class="btn btn-primary btn-glow">
+                            <span>התחל עכשיו</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-video">
+                            <i class="fas fa-play-circle"></i>
+                            <span>צפה בהדגמה</span>
+                        </a>
+                    </div>
+                    <div class="hero-stats animate__animated animate__fadeInUp animate__delay-3s">
+                        <div class="stat-item">
+                            <span class="stat-value">500+</span>
+                            <span class="stat-label">לקוחות ארגוניים</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">99.9%</span>
+                            <span class="stat-label">זמינות מערכת</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">50M+</span>
+                            <span class="stat-label">משתמשים פעילים</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-window">
+                            <div class="window-header">
+                                <div class="window-controls">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="dashboard-content">
+                                <img src="https://via.placeholder.com/600x400/1a202c/ffffff?text=Dashboard+Preview" alt="Dashboard Preview">
+                            </div>
+                        </div>
+                        <div class="floating-cards">
+                            <div class="float-card card-1">
+                                <i class="fas fa-chart-line"></i>
+                                <span>ניתוח בזמן אמת</span>
+                            </div>
+                            <div class="float-card card-2">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>אבטחה מתקדמת</span>
+                            </div>
+                            <div class="float-card card-3">
+                                <i class="fas fa-sync"></i>
+                                <span>סנכרון אוטומטי</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>גלול למטה</span>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Trust Badges -->
+    <section class="trust-badges">
         <div class="container">
-            <h2 class="section-title">אודות מטריצה</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>חזון וחדשנות בפיתוח תוכנה</h3>
-                    <p>מטריצה הוקמה עם חזון ברור - להוביל את תעשיית פיתוח התוכנה בישראל תוך מתן פתרונות טכנולוגיים מתקדמים ומותאמים אישית לכל לקוח. אנו מאמינים שכל עסק ייחודי וזקוק לפתרון תוכנה המותאם בדיוק לצרכיו.</p>
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <h4>צוות מומחים</h4>
-                            <p>מפתחים בכירים עם ניסיון של למעלה מ-10 שנים</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-rocket"></i>
-                            <h4>טכנולוגיות מתקדמות</h4>
-                            <p>שימוש בכלים ושפות התכנות החדישות ביותר</p>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <h4>אמינות מוכחת</h4>
-                            <p>מאות פרויקטים מוצלחים ולקוחות מרוצים</p>
-                        </div>
-                    </div>
+            <div class="badges-wrapper">
+                <div class="badge-item">
+                    <i class="fas fa-award"></i>
+                    <span>ISO 27001</span>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="150">0</div>
-                        <div class="stat-label">פרויקטים הושלמו</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="50">0</div>
-                        <div class="stat-label">לקוחות פעילים</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="15">0</div>
-                        <div class="stat-label">שנות ניסיון</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-target="98">0</div>
-                        <div class="stat-label">% שביעות רצון</div>
-                    </div>
+                <div class="badge-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>SOC 2 Type II</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>GDPR Compliant</span>
+                </div>
+                <div class="badge-item">
+                    <i class="fas fa-lock"></i>
+                    <span>Bank-Level Security</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
         <div class="container">
-            <h2 class="section-title">השירותים שלנו</h2>
-            <p class="section-subtitle">פתרונות מקצה לקצה לכל צורך טכנולוגי</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-clipboard-list"></i>
-                    </div>
-                    <h3>אפיון מערכות</h3>
-                    <p>ניתוח מעמיק של הצרכים העסקיים ותרגומם למפרט טכני מפורט. כולל תכנון ארכיטקטורה, הגדרת ממשקים ותהליכי עבודה.</p>
-                    <ul class="service-features">
-                        <li>ניתוח דרישות מקיף</li>
-                        <li>תכנון ארכיטקטורת מערכת</li>
-                        <li>הכנת מסמכי אפיון מפורטים</li>
-                        <li>ליווי לאורך כל הפרויקט</li>
-                    </ul>
-                    <a href="#contact" class="service-link">למידע נוסף <i class="fas fa-arrow-left"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>פיתוח תוכנה</h3>
-                    <p>פיתוח אפליקציות ומערכות מותאמות אישית בטכנולוגיות המתקדמות ביותר. מאפליקציות מובייל ועד מערכות ארגוניות מורכבות.</p>
-                    <ul class="service-features">
-                        <li>פיתוח Full Stack</li>
-                        <li>אפליקציות מובייל</li>
-                        <li>מערכות Web מתקדמות</li>
-                        <li>API ושירותי ענן</li>
-                    </ul>
-                    <a href="#contact" class="service-link">למידע נוסף <i class="fas fa-arrow-left"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>ייעוץ טכנולוגי</h3>
-                    <p>ייעוץ מקצועי לבחירת הטכנולוגיות המתאימות ביותר לפרויקט שלכם. כולל המלצות לשיפור ביצועים ואופטימיזציה.</p>
-                    <ul class="service-features">
-                        <li>בחירת טכנולוגיות</li>
-                        <li>אופטימיזציית ביצועים</li>
-                        <li>אבטחת מידע</li>
-                        <li>תכנון לטווח ארוך</li>
-                    </ul>
-                    <a href="#contact" class="service-link">למידע נוסף <i class="fas fa-arrow-left"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>תחזוקה ותמיכה</h3>
-                    <p>שירותי תחזוקה שוטפת ותמיכה טכנית 24/7. הבטחת זמינות מקסימלית וטיפול מהיר בתקלות.</p>
-                    <ul class="service-features">
-                        <li>תמיכה 24/7</li>
-                        <li>עדכונים שוטפים</li>
-                        <li>ניטור ביצועים</li>
-                        <li>גיבויים אוטומטיים</li>
-                    </ul>
-                    <a href="#contact" class="service-link">למידע נוסף <i class="fas fa-arrow-left"></i></a>
-                </div>
+            <div class="section-header">
+                <span class="section-label">הפתרונות שלנו</span>
+                <h2 class="section-title">
+                    פתרונות מותאמים
+                    <span class="gradient-text">לכל אתגר עסקי</span>
+                </h2>
+                <p class="section-subtitle">
+                    טכנולוגיות מתקדמות שמאפשרות לעסק שלך לצמוח ולהתפתח
+                </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section id="technologies" class="technologies">
-        <div class="container">
-            <h2 class="section-title">הטכנולוגיות שלנו</h2>
-            <p class="section-subtitle">עובדים עם המגוון הרחב ביותר של שפות וטכנולוגיות</p>
             
-            <div class="tech-categories">
-                <div class="tech-category">
-                    <h3><i class="fas fa-desktop"></i> Frontend</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
+            <div class="solutions-grid">
+                <div class="solution-card" data-aos="fade-up">
+                    <div class="card-glow"></div>
+                    <div class="solution-icon">
+                        <div class="icon-bg">
+                            <i class="fas fa-cloud"></i>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-vuejs"></i>
-                            <span>Vue.js</span>
+                    </div>
+                    <h3>תשתיות ענן</h3>
+                    <p>מעבר חלק לענן עם ארכיטקטורה מודרנית, סקיילבילית ומאובטחת</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Multi-Cloud Architecture</li>
+                        <li><i class="fas fa-check"></i> Kubernetes Orchestration</li>
+                        <li><i class="fas fa-check"></i> Auto-Scaling Solutions</li>
+                        <li><i class="fas fa-check"></i> 99.99% Uptime SLA</li>
+                    </ul>
+                    <a href="#" class="solution-link">
+                        <span>למידע נוסף</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="solution-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge">פופולרי</div>
+                    <div class="card-glow"></div>
+                    <div class="solution-icon">
+                        <div class="icon-bg">
+                            <i class="fas fa-cogs"></i>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-angular"></i>
-                            <span>Angular</span>
+                    </div>
+                    <h3>אוטומציה ארגונית</h3>
+                    <p>אוטומציה חכמה של תהליכים עסקיים לשיפור יעילות והפחתת עלויות</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> RPA Solutions</li>
+                        <li><i class="fas fa-check"></i> AI-Powered Workflows</li>
+                        <li><i class="fas fa-check"></i> Process Mining</li>
+                        <li><i class="fas fa-check"></i> Real-time Analytics</li>
+                    </ul>
+                    <a href="#" class="solution-link">
+                        <span>למידע נוסף</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="solution-icon">
+                        <div class="icon-bg">
+                            <i class="fas fa-brain"></i>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
+                    </div>
+                    <h3>בינה מלאכותית</h3>
+                    <p>פתרונות AI ו-ML מתקדמים לניתוח נתונים וקבלת החלטות חכמה</p>
+                    <ul class="solution-features">
+                        <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                        <li><i class="fas fa-check"></i> NLP Solutions</li>
+                        <li><i class="fas fa-check"></i> Computer Vision</li>
+                        <li><i class="fas fa-check"></i> Custom ML Models</li>
+                    </ul>
+                    <a href="#" class="solution-link">
+                        <span>למידע נוסף</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section id="infrastructure" class="infrastructure">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">תשתיות טכנולוגיות</span>
+                <h2 class="section-title">
+                    ארכיטקטורה מודרנית
+                    <span class="gradient-text">לביצועים מקסימליים</span>
+                </h2>
+            </div>
+            
+            <div class="infrastructure-showcase">
+                <div class="infra-categories">
+                    <div class="category-tab active" data-category="frontend">
+                        <i class="fas fa-desktop"></i>
+                        <span>Frontend</span>
+                    </div>
+                    <div class="category-tab" data-category="backend">
+                        <i class="fas fa-server"></i>
+                        <span>Backend</span>
+                    </div>
+                    <div class="category-tab" data-category="database">
+                        <i class="fas fa-database"></i>
+                        <span>Database</span>
+                    </div>
+                    <div class="category-tab" data-category="devops">
+                        <i class="fas fa-infinity"></i>
+                        <span>DevOps</span>
                     </div>
                 </div>
                 
-                <div class="tech-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
+                <div class="category-content">
+                    <div class="content-panel active" id="frontend">
+                        <h3>פיתוח ממשקי משתמש מתקדמים</h3>
+                        <p>חוויית משתמש יוצאת דופן עם טכנולוגיות Frontend מודרניות</p>
+                        <div class="tech-stack">
+                            <div class="tech-card">
+                                <i class="fab fa-react"></i>
+                                <span>React Ecosystem</span>
+                                <p>Component-based architecture</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-vuejs"></i>
+                                <span>Vue.js Framework</span>
+                                <p>Progressive web apps</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-angular"></i>
+                                <span>Angular Platform</span>
+                                <p>Enterprise applications</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-js"></i>
+                                <span>Modern JavaScript</span>
+                                <p>ES6+ & TypeScript</p>
+                            </div>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-gem"></i>
-                            <span>Ruby</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-code"></i>
-                            <span>C#</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3><i class="fas fa-mobile-alt"></i> Mobile</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-react"></i>
-                            <span>React Native</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-mobile"></i>
-                            <span>Flutter</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-android"></i>
-                            <span>Android</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-apple"></i>
-                            <span>iOS</span>
+                        <div class="tech-features">
+                            <div class="feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Responsive Design</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Performance Optimization</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-universal-access"></i>
+                                <span>Accessibility Standards</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-paint-brush"></i>
+                                <span>Modern UI/UX</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3><i class="fas fa-database"></i> Database</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
+                    
+                    <div class="content-panel" id="backend">
+                        <h3>תשתיות צד שרת מתקדמות</h3>
+                        <p>ארכיטקטורת Microservices עם ביצועים וסקיילביליות</p>
+                        <div class="tech-stack">
+                            <div class="tech-card">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js Runtime</span>
+                                <p>Event-driven architecture</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-python"></i>
+                                <span>Python Ecosystem</span>
+                                <p>AI & Data processing</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-java"></i>
+                                <span>Java Enterprise</span>
+                                <p>Spring Boot framework</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-cube"></i>
+                                <span>.NET Platform</span>
+                                <p>Cross-platform solutions</p>
+                            </div>
                         </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-database"></i>
-                            <span>Redis</span>
+                        <div class="tech-features">
+                            <div class="feature">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Microservices</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>RESTful APIs</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <span>Real-time Processing</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-lock"></i>
+                                <span>Security First</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="tech-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                    <div class="tech-grid">
-                        <div class="tech-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
+                    
+                    <div class="content-panel" id="database">
+                        <h3>פתרונות אחסון נתונים מתקדמים</h3>
+                        <p>בסיסי נתונים מודרניים לכל סוג של מידע ושימוש</p>
+                        <div class="tech-stack">
+                            <div class="tech-card">
+                                <i class="fas fa-database"></i>
+                                <span>PostgreSQL</span>
+                                <p>Advanced SQL database</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-leaf"></i>
+                                <span>MongoDB</span>
+                                <p>NoSQL document store</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-bolt"></i>
+                                <span>Redis Cache</span>
+                                <p>In-memory data store</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-search"></i>
+                                <span>Elasticsearch</span>
+                                <p>Full-text search engine</p>
+                            </div>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure</span>
+                        <div class="tech-features">
+                            <div class="feature">
+                                <i class="fas fa-sync"></i>
+                                <span>Data Replication</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Encryption at Rest</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand-arrows-alt"></i>
+                                <span>Auto Scaling</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-history"></i>
+                                <span>Backup & Recovery</span>
+                            </div>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-google"></i>
-                            <span>Google Cloud</span>
+                    </div>
+                    
+                    <div class="content-panel" id="devops">
+                        <h3>תרבות DevOps ואוטומציה</h3>
+                        <p>CI/CD pipelines ותשתיות ענן מודרניות</p>
+                        <div class="tech-stack">
+                            <div class="tech-card">
+                                <i class="fab fa-docker"></i>
+                                <span>Docker Containers</span>
+                                <p>Containerization platform</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fas fa-dharmachakra"></i>
+                                <span>Kubernetes</span>
+                                <p>Container orchestration</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-jenkins"></i>
+                                <span>Jenkins CI/CD</span>
+                                <p>Automation server</p>
+                            </div>
+                            <div class="tech-card">
+                                <i class="fab fa-git-alt"></i>
+                                <span>GitOps</span>
+                                <p>Version control workflow</p>
+                            </div>
                         </div>
-                        <div class="tech-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fas fa-dharmachakra"></i>
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="tech-item">
-                            <i class="fab fa-jenkins"></i>
-                            <span>Jenkins</span>
+                        <div class="tech-features">
+                            <div class="feature">
+                                <i class="fas fa-code-branch"></i>
+                                <span>CI/CD Pipelines</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Monitoring & Logging</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-robot"></i>
+                                <span>Infrastructure as Code</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-cloud"></i>
+                                <span>Multi-Cloud Support</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -316,95 +484,291 @@
         </div>
     </section>
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients">
+    <!-- Industries Section -->
+    <section id="industries" class="industries">
         <div class="container">
-            <h2 class="section-title">הלקוחות שלנו</h2>
-            <p class="section-subtitle">גאים לעבוד עם החברות המובילות במשק</p>
+            <div class="section-header">
+                <span class="section-label">תעשיות</span>
+                <h2 class="section-title">
+                    פתרונות מותאמים
+                    <span class="gradient-text">לכל תעשייה</span>
+                </h2>
+            </div>
             
-            <div class="clients-logos">
-                <div class="client-logo">
-                    <div class="logo-placeholder">
-                        <i class="fas fa-building"></i>
-                        <span>טכנולוגיות מתקדמות</span>
-                    </div>
-                </div>
-                <div class="client-logo">
-                    <div class="logo-placeholder">
-                        <i class="fas fa-hospital"></i>
-                        <span>רשת בריאות</span>
-                    </div>
-                </div>
-                <div class="client-logo">
-                    <div class="logo-placeholder">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>קמעונאות דיגיטלית</span>
-                    </div>
-                </div>
-                <div class="client-logo">
-                    <div class="logo-placeholder">
+            <div class="industries-grid">
+                <div class="industry-card" data-aos="zoom-in">
+                    <div class="industry-icon">
                         <i class="fas fa-university"></i>
-                        <span>בנק מוביל</span>
+                    </div>
+                    <h3>בנקאות ופיננסים</h3>
+                    <p>פתרונות פינטק מאובטחים עם עמידה בתקני רגולציה</p>
+                    <div class="industry-stats">
+                        <div class="stat">
+                            <span class="value">15+</span>
+                            <span class="label">בנקים מובילים</span>
+                        </div>
+                        <div class="stat">
+                            <span class="value">$2B+</span>
+                            <span class="label">עסקאות יומיות</span>
+                        </div>
                     </div>
                 </div>
-                <div class="client-logo">
-                    <div class="logo-placeholder">
+                
+                <div class="industry-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>בריאות דיגיטלית</h3>
+                    <p>מערכות רפואיות מתקדמות עם אינטגרציה מלאה</p>
+                    <div class="industry-stats">
+                        <div class="stat">
+                            <span class="value">50+</span>
+                            <span class="label">בתי חולים</span>
+                        </div>
+                        <div class="stat">
+                            <span class="value">1M+</span>
+                            <span class="label">מטופלים</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="industry-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>קמעונאות ומסחר</h3>
+                    <p>פלטפורמות e-commerce עם חוויית קנייה מתקדמת</p>
+                    <div class="industry-stats">
+                        <div class="stat">
+                            <span class="value">100+</span>
+                            <span class="label">חנויות אונליין</span>
+                        </div>
+                        <div class="stat">
+                            <span class="value">10M+</span>
+                            <span class="label">הזמנות שנתיות</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="industry-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="industry-icon">
                         <i class="fas fa-graduation-cap"></i>
-                        <span>מוסד אקדמי</span>
+                    </div>
+                    <h3>חינוך וטכנולוגיה</h3>
+                    <p>פלטפורמות למידה דיגיטלית וניהול מוסדות</p>
+                    <div class="industry-stats">
+                        <div class="stat">
+                            <span class="value">200+</span>
+                            <span class="label">מוסדות חינוך</span>
+                        </div>
+                        <div class="stat">
+                            <span class="value">500K+</span>
+                            <span class="label">סטודנטים</span>
+                        </div>
                     </div>
                 </div>
-                <div class="client-logo">
-                    <div class="logo-placeholder">
-                        <i class="fas fa-industry"></i>
-                        <span>תעשייה 4.0</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Metrics Dashboard -->
+    <section id="success" class="success-metrics">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">תוצאות מוכחות</span>
+                <h2 class="section-title">
+                    המספרים
+                    <span class="gradient-text">מדברים בעד עצמם</span>
+                </h2>
+            </div>
+            
+            <div class="metrics-dashboard">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="metric-value" data-target="87">0</div>
+                    <div class="metric-suffix">%</div>
+                    <div class="metric-label">שיפור בביצועים</div>
+                    <div class="metric-chart">
+                        <canvas id="performanceChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="metric-value" data-target="42">0</div>
+                    <div class="metric-suffix">%</div>
+                    <div class="metric-label">הפחתת עלויות</div>
+                    <div class="metric-chart">
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="metric-value" data-target="3">0</div>
+                    <div class="metric-suffix">x</div>
+                    <div class="metric-label">מהירות פיתוח</div>
+                    <div class="metric-chart">
+                        <canvas id="speedChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="metric-value" data-target="98">0</div>
+                    <div class="metric-suffix">%</div>
+                    <div class="metric-label">שביעות רצון</div>
+                    <div class="metric-chart">
+                        <canvas id="satisfactionChart"></canvas>
                     </div>
                 </div>
             </div>
             
-            <div class="testimonials">
-                <h3 class="testimonials-title">מה הלקוחות שלנו אומרים</h3>
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"מטריצה ליוותה אותנו בפיתוח מערכת ה-ERP החדשה שלנו. המקצועיות והיכולת הטכנית יוצאות דופן. הפרויקט הושלם בזמן ובתקציב."</p>
-                        <div class="testimonial-author">
-                            <strong>דני כהן</strong>
-                            <span>מנכ"ל חברת טכנולוגיות מתקדמות</span>
-                        </div>
+            <div class="roi-calculator">
+                <h3>מחשבון החזר השקעה</h3>
+                <div class="calculator-form">
+                    <div class="input-group">
+                        <label>מספר עובדים</label>
+                        <input type="number" id="employees" value="100">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"הצוות של מטריצה הבין לעומק את הצרכים שלנו ופיתח אפליקציה שעולה על כל הציפיות. התמיכה השוטפת מעולה."</p>
-                        <div class="testimonial-author">
-                            <strong>מיכל לוי</strong>
-                            <span>סמנכ"ל דיגיטל, רשת קמעונאות</span>
-                        </div>
+                    <div class="input-group">
+                        <label>עלות שעתית ממוצעת</label>
+                        <input type="number" id="hourlyRate" value="150">
                     </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"בחרנו במטריצה בגלל הניסיון הרב שלהם בתחום הפינטק. הם סיפקו פתרון מאובטח, יציב ומהיר שמשרת אלפי משתמשים מדי יום."</p>
-                        <div class="testimonial-author">
-                            <strong>רון שפירא</strong>
-                            <span>CTO, חברת פינטק</span>
-                        </div>
+                    <div class="input-group">
+                        <label>שעות חסכון שבועיות</label>
+                        <input type="number" id="hoursSaved" value="20">
+                    </div>
+                    <div class="roi-result">
+                        <span class="label">חיסכון שנתי משוער</span>
+                        <span class="value" id="roiValue">₪1,560,000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">תוכניות ומחירים</span>
+                <h2 class="section-title">
+                    בחר את התוכנית
+                    <span class="gradient-text">המתאימה לך</span>
+                </h2>
+            </div>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">חיוב חודשי</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">חיוב שנתי <span class="discount">חסכון 20%</span></span>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Starter</h3>
+                        <p>לעסקים קטנים ובינוניים</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₪</span>
+                        <span class="amount" data-monthly="2,999" data-yearly="28,790">2,999</span>
+                        <span class="period">/חודש</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> עד 50 משתמשים</li>
+                        <li><i class="fas fa-check"></i> 100GB אחסון</li>
+                        <li><i class="fas fa-check"></i> תמיכה בשעות העבודה</li>
+                        <li><i class="fas fa-check"></i> דוחות בסיסיים</li>
+                        <li><i class="fas fa-check"></i> API Access</li>
+                    </ul>
+                    <button class="btn btn-outline">התחל ניסיון חינם</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="popular-badge">הכי פופולרי</div>
+                    <div class="plan-header">
+                        <h3>Professional</h3>
+                        <p>לארגונים בצמיחה</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₪</span>
+                        <span class="amount" data-monthly="7,999" data-yearly="76,790">7,999</span>
+                        <span class="period">/חודש</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> עד 500 משתמשים</li>
+                        <li><i class="fas fa-check"></i> 1TB אחסון</li>
+                        <li><i class="fas fa-check"></i> תמיכה 24/7</li>
+                        <li><i class="fas fa-check"></i> דוחות מתקדמים</li>
+                        <li><i class="fas fa-check"></i> אינטגרציות מלאות</li>
+                        <li><i class="fas fa-check"></i> Custom workflows</li>
+                    </ul>
+                    <button class="btn btn-primary">התחל ניסיון חינם</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Enterprise</h3>
+                        <p>לארגונים גדולים</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="custom-price">מחיר מותאם</span>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> משתמשים ללא הגבלה</li>
+                        <li><i class="fas fa-check"></i> אחסון ללא הגבלה</li>
+                        <li><i class="fas fa-check"></i> Dedicated support</li>
+                        <li><i class="fas fa-check"></i> Custom development</li>
+                        <li><i class="fas fa-check"></i> On-premise option</li>
+                        <li><i class="fas fa-check"></i> SLA 99.99%</li>
+                    </ul>
+                    <button class="btn btn-outline">צור קשר</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>מוכנים להתחיל את המסע הדיגיטלי שלכם?</h2>
+                <p>הצטרפו לאלפי ארגונים שכבר הפכו את החזון שלהם למציאות</p>
+                <div class="cta-buttons">
+                    <a href="#demo" class="btn btn-primary btn-large">
+                        <span>קבע פגישת ייעוץ חינם</span>
+                        <i class="fas fa-calendar-check"></i>
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-large">
+                        <span>הורד חוברת מידע</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="cta-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>ללא התחייבות</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>30 יום ניסיון חינם</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>תמיכה מלאה</span>
                     </div>
                 </div>
             </div>
@@ -414,8 +778,13 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">צור קשר</h2>
-            <p class="section-subtitle">נשמח לשמוע ממך ולעזור לך להגשים את החזון הטכנולוגי שלך</p>
+            <div class="section-header">
+                <span class="section-label">צור קשר</span>
+                <h2 class="section-title">
+                    בואו נדבר על
+                    <span class="gradient-text">הפרויקט הבא שלכם</span>
+                </h2>
+            </div>
             
             <div class="contact-wrapper">
                 <div class="contact-form-wrapper">
@@ -424,71 +793,102 @@
                             <div class="form-group">
                                 <label for="name">שם מלא</label>
                                 <input type="text" id="name" name="name" required>
+                                <span class="form-icon"><i class="fas fa-user"></i></span>
                             </div>
                             <div class="form-group">
                                 <label for="company">שם החברה</label>
                                 <input type="text" id="company" name="company">
+                                <span class="form-icon"><i class="fas fa-building"></i></span>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">אימייל</label>
                                 <input type="email" id="email" name="email" required>
+                                <span class="form-icon"><i class="fas fa-envelope"></i></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone">טלפון</label>
                                 <input type="tel" id="phone" name="phone" required>
+                                <span class="form-icon"><i class="fas fa-phone"></i></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="project">תיאור הפרויקט</label>
-                            <textarea id="project" name="project" rows="4" required></textarea>
+                            <label for="budget">תקציב משוער</label>
+                            <select id="budget" name="budget">
+                                <option value="">בחר תקציב</option>
+                                <option value="50-100">₪50,000 - ₪100,000</option>
+                                <option value="100-250">₪100,000 - ₪250,000</option>
+                                <option value="250-500">₪250,000 - ₪500,000</option>
+                                <option value="500+">₪500,000+</option>
+                            </select>
+                            <span class="form-icon"><i class="fas fa-shekel-sign"></i></span>
                         </div>
-                        <button type="submit" class="btn btn-primary">שלח הודעה</button>
+                        <div class="form-group full-width">
+                            <label for="project">ספר לנו על הפרויקט</label>
+                            <textarea id="project" name="project" rows="4" required></textarea>
+                            <span class="form-icon"><i class="fas fa-comment-alt"></i></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>שלח הודעה</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
                 
                 <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h4>טלפון</h4>
-                            <p>03-1234567</p>
+                    <div class="info-card">
+                        <div class="info-header">
+                            <h3>פרטי התקשרות</h3>
+                            <p>נשמח לענות על כל שאלה</p>
                         </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>אימייל</h4>
-                            <p>info@matrize.co.il</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>כתובת</h4>
-                            <p>רחוב הארבעה 21, תל אביב</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>שעות פעילות</h4>
-                            <p>ראשון - חמישי: 9:00 - 18:00</p>
-                            <p>שישי: 9:00 - 13:00</p>
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>כתובת</h4>
+                                    <p>מגדל עזריאלי שרונה, קומה 42<br>תל אביב</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>טלפון</h4>
+                                    <p>03-1234567<br>1-800-MATRIX</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>אימייל</h4>
+                                    <p>info@matrize.co.il<br>sales@matrize.co.il</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="content">
+                                    <h4>שעות פעילות</h4>
+                                    <p>ראשון - חמישי: 8:00 - 19:00<br>שישי: 8:00 - 13:00</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.709374565985!2d34.77570721519795!3d32.085980480991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b82b1f8dd51%3A0x5e7a2f3c5d0c7a8b!2z15TXkNeo15HXoteTIDIxLCDXqtecINeQ15HXmdeR!5e0!3m2!1siw!2sil!4v1234567890"
-                            width="100%" 
-                            height="250" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                    <div class="support-card">
+                        <h4>תמיכה מיידית</h4>
+                        <p>צוות התמיכה שלנו זמין 24/7</p>
+                        <a href="#" class="btn btn-chat">
+                            <i class="fas fa-comments"></i>
+                            <span>התחל צ'אט</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -498,34 +898,93 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="מטריצה">
-                    <p>פתרונות תוכנה חכמים לעולם דיגיטלי</p>
-                </div>
-                <div class="footer-links">
-                    <h4>קישורים מהירים</h4>
-                    <a href="#about">אודות</a>
-                    <a href="#services">שירותים</a>
-                    <a href="#technologies">טכנולוגיות</a>
-                    <a href="#contact">צור קשר</a>
-                </div>
-                <div class="footer-social">
-                    <h4>עקבו אחרינו</h4>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="מטריצה" class="footer-logo">
+                    <p>מובילים את המהפכה הדיגיטלית עם פתרונות תוכנה ארגוניים מתקדמים</p>
                     <div class="social-links">
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
                         <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>פתרונות</h4>
+                        <a href="#">תשתיות ענן</a>
+                        <a href="#">אוטומציה ארגונית</a>
+                        <a href="#">בינה מלאכותית</a>
+                        <a href="#">אבטחת מידע</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>תעשיות</h4>
+                        <a href="#">בנקאות ופיננסים</a>
+                        <a href="#">בריאות</a>
+                        <a href="#">קמעונאות</a>
+                        <a href="#">חינוך</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>משאבים</h4>
+                        <a href="#">בלוג</a>
+                        <a href="#">מדריכים</a>
+                        <a href="#">תיעוד API</a>
+                        <a href="#">וובינרים</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>החברה</h4>
+                        <a href="#">אודות</a>
+                        <a href="#">קריירה</a>
+                        <a href="#">שותפים</a>
+                        <a href="#">חדשות</a>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2024 מטריצה. כל הזכויות שמורות.</p>
+                <div class="footer-legal">
+                    <a href="#">תנאי שימוש</a>
+                    <a href="#">מדיניות פרטיות</a>
+                    <a href="#">אבטחת מידע</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Demo Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>קבע הדגמה אישית</h2>
+            <p>מלא את הפרטים ונחזור אליך תוך 24 שעות</p>
+            <form class="demo-form">
+                <input type="text" placeholder="שם מלא" required>
+                <input type="email" placeholder="אימייל" required>
+                <input type="tel" placeholder="טלפון" required>
+                <select required>
+                    <option value="">בחר תחום עניין</option>
+                    <option>תשתיות ענן</option>
+                    <option>אוטומציה</option>
+                    <option>בינה מלאכותית</option>
+                    <option>אחר</option>
+                </select>
+                <button type="submit" class="btn btn-primary">שלח בקשה</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
